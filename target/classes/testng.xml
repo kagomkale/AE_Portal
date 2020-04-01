@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="AutomationEdge Portal Automation Suite">
+ <!-- <listeners>
+        <listener class-name="com.ontestautomation.extentreports.listener.ExtentReporterNG" />
+    </listeners> -->
+
+  	<test name="AutomationEdge Test Cases ">
+  	<packages>
+            <package name="com.ae.qa.testcases" />
+        </packages>
+ 
+ 		<classes>
+		 <class name="com.ae.qa.testcases.LoginPageTest" > </class>
+		 <class name="com.ae.qa.testcases.TenantsPageTest"> </class>
+ 		</classes> 
+ 		
+ 	</test>
+</suite>

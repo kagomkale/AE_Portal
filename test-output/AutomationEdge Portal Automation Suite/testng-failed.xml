@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [AutomationEdge Portal Automation Suite]">
+  <test thread-count="5" name="AutomationEdge Test Cases (failed)">
+    <classes>
+      <class name="com.ae.qa.testcases.TenantsPageTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="validateTenantsPageTitleTest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.ae.qa.testcases.TenantsPageTest -->
+    </classes>
+  </test> <!-- AutomationEdge Test Cases (failed) -->
+</suite> <!-- Failed suite [AutomationEdge Portal Automation Suite] -->
