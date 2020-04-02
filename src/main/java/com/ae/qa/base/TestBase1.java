@@ -92,8 +92,10 @@ public class TestBase1 {
 
 	
 	@BeforeMethod
-	public static void initialization() {
+	public void initialization() {
+		
 		log.debug("Execution started");
+		extentTest = extent.createTest("AEtitle");
 		String browserName = prop.getProperty("browser");
 		if(browserName.equals("Chrome")) {
 			System.setProperty("webdriver.chrome.driver","C:\\Users\\Kalyani\\eclipse-workspace\\webdrivertraining\\test\\resources\\chromedriver_new.exe");
@@ -117,6 +119,8 @@ public class TestBase1 {
 	}
 	 @AfterMethod
 	 public void getResult(ITestResult result) throws Exception{
+		// extentTest = extent.createTest("AEtitle");
+		 //extentTest=extent.createTest(loginPageTitleTest.getName());
 	 if(result.getStatus() == ITestResult.FAILURE){
 	 //MarkupHelper is used to display the output in different colors
      extentTest.log(Status.FAIL, MarkupHelper.createLabel(result.getName() + " - Test Case Failed", ExtentColor.RED));

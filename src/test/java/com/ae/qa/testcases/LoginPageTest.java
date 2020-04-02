@@ -1,5 +1,6 @@
 package com.ae.qa.testcases;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -17,6 +18,7 @@ public class LoginPageTest extends TestBase1{
 	TenantsPage tenantspage;
 	ExtentTest extentTest;
 	ExtentReports extent;
+	//WebDriver driver;
 	//to initialize the prop files in TestBase class
 public LoginPageTest() {
 		super();
@@ -29,8 +31,10 @@ public LoginPageTest() {
 	 */
 	@Test(priority=1)
 	public void loginPageTitleTest() {
-		extentTest = extent.createTest("AETitleTest");
+		loginpage=new LoginPage();
+		//extentTest = extent.createTest("AETitleTest");
 		String actual_Title = loginpage.validateLogInPageTitle();
+		//String actual_Title=driver.getTitle();
 		System.out.println(actual_Title);
 		Assert.assertEquals(actual_Title, "AutomationEdge");
 		log.info("AE title validated");

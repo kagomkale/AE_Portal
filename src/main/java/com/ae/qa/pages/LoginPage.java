@@ -1,12 +1,14 @@
 package com.ae.qa.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.ae.qa.base.TestBase;
+import com.ae.qa.base.TestBase1;
 
-public class LoginPage extends TestBase{
+public class LoginPage extends TestBase1{
 	
 	//PageFactory
 	@FindBy(xpath="//input[@id='uname']")
@@ -27,6 +29,7 @@ public class LoginPage extends TestBase{
 
 	//Actions
 	public String validateLogInPageTitle(){
+		System.out.println(driver.getTitle());
 		return driver.getTitle();
 	}
 	//return type is object of TenantPage
